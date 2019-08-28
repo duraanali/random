@@ -1,0 +1,53 @@
+.random-cards {
+  width: 750px;
+  padding: 15px 0 15px 20px;
+  margin: 0 auto;
+}
+
+.ideas{
+  background: #4788eb;
+  color: white;
+  text-align: center;
+  height: 150px;
+  position: relative;
+}
+
+.ideas h2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.5px;
+}
+
+.formRandom {
+  display: flex;
+  margin-top: 27px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.inputRandom {
+  outline: none;
+  width: 85%;
+  background: #F0F0F0;
+  border: 1px solid #d9d9d9;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-weight: 400;
+  transition: 0.3s ease;
+
+}
+
+.btnRandom {
+  cursor: pointer;
+  width: 15%;
+  background: #767676;
+  border: 0;
+  color: #ffffff;
+  transition: 0.3s ease;
+  height: 37px;
+
+}
