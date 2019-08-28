@@ -13,12 +13,14 @@
 }
 
 .ideas h2 {
+  /* font-family: "Roboto"; */
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.5px;
+  font-size: 40px;
 }
 
 .formRandom {
@@ -49,5 +51,11 @@
   color: #ffffff;
   transition: 0.3s ease;
   height: 37px;
+
+}
+
+.edit-icon {
+ 
+
 
 }

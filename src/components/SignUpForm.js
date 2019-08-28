@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import axiosWithAuth from "../utils/axiosWithAuth";
+import axiosWithAuth from "../utils/axiosWithAuth";
 import { Link } from 'react-router-dom';
-import axios from "axios";
+// import axios from "axios";
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import "./SignUpForm.css"
@@ -62,7 +62,7 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status }) => {
      .oneOf([Yup.ref('password'), null], 'Passwords must match')
     }),
   
-    handleSubmit(values, { setStatus }) {
+    handleSubmit(values, props ) {
       console.log("sign up form values =", values);
       console.log("sign up form email value =", values.email);
       console.log("sign up form password value =", values.password);
@@ -73,12 +73,13 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status }) => {
       }
 
 
-      axios
+      axiosWithAuth()
       .post(`https://random-ark-generator.herokuapp.com/api/auth/register`, submitValues)
-        .then(res => {
-          // setStatus(response.data),
-          console.log("login Payload", res.data.token)
-          localStorage.setItem('token', res.data.token);
+        .then(response => {
+          console.log("sign up success, login payload =", response.data)
+          // setStatus(response.data)
+          localStorage.setItem('token', JSON.stringify(response.data));
+          // props.history.push('/login');
 
         })
         .catch(error => console.log("sign up errorz", error.response));

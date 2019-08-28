@@ -10,7 +10,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
-function LoginForm({
+function LoginForm( {
     errors,
     touched
 }) {
@@ -36,7 +36,7 @@ function LoginForm({
                         placeholder = "Enter your password" />
                             <button type = "submit"
                         className = "btnSignIn"> Login </button> 
-                        <p> Not a member yet? <Link to='/signup'> Sign Up </Link></p >
+                        <p className="notMember"> Not a member yet? <Link to='/signup'> Sign Up </Link></p >
                             </Form> 
                             </div> 
                             </div>
@@ -62,14 +62,19 @@ function LoginForm({
                     password: Yup.string()
                         .required("Password is required")
                 }),
-                handleSubmit(values) {
-                    console.log(values);
+                handleSubmit(values, {
+                        resetForm,
+                        setStatus,
+                        props
+                    }) {
+              
                     axios.post(`https://random-ark-generator.herokuapp.com/api/auth/login`, values)
                         .then(res => {
-                            console.log("login Payload", res.data.token)
-
+                            console.log("login success, login Payload =", res.data.token)
+                          setStatus(res.data.token)
+                          resetForm();
                             localStorage.setItem('token', res.data.token);
-
+                           props.history.push('/welcome');
                         })
                         .catch(err => console.log(err.response));
 

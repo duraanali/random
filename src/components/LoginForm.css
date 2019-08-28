@@ -1,44 +1,47 @@
 .container {
         background: #c3a9ee;
-        padding: 100px;
+        padding-bottom: 270px;
+        padding-top: 125px;
 }
 
 .form {
-        display: block;
-        padding: 56px;
+          display: block;
+          padding: 56px;
 }
 
 .form-cover {
-        position: relative;
-        background: #ffffff;
-        max-width: 452px;
-        width: 100%;
-        box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-        margin: 0 auto;
-        border-radius: 4px;
+position: relative;
+background: #ffffff;
+max-width: 488px;
+width: 100%;
+box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+margin: 0 auto;
+border-radius: 4px;
 }
 
 .input {
-        outline: none;
-        display: block;
-        width: 100%;
-        background: #F0F0F0;
-        border: 1px solid #d9d9d9;
-        margin: 0 0 20px;
-        padding: 10px 15px;
-        box-sizing: border-box;
-        font-weight: 400;
-        -webkit-transition: 0.3s ease;
-        transition: 0.3s ease;
-        border-radius: 5px;
+outline: none;
+display: block;
+width: 100%;
+background: #F0F0F0;
+border: 1px solid #d9d9d9;
+margin: 0 0 20px;
+padding: 10px 15px;
+box-sizing: border-box;
+font-weight: 400;
+transition: 0.3s ease;
+border-radius: 5px;
+font-size: 1.2rem;
+margin-top: 0.5rem;
 }
 
 .loginTitle {
-        text-align: center;
-        font-weight: 700;
+           text-align: center;
+           font-weight: 700;
+           font-size: 2.5rem;
 }
 
-.btnSignIn {
+/* .btnSignIn {
         cursor: pointer;
         background: #767676;
         width: 100%;
@@ -47,7 +50,46 @@
         color: #ffffff;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease;
+        font-size: 1.7rem;
+} */
+
+.btnSignIn {
+        background-color: #20262e;
+        position: relative;
+  border: none;
+  font-size: 1.7rem;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
 }
+
+.btnSignIn:after {
+        content: "";
+        background: #767676;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px!important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+      }
+ 
+      .btnSignIn:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+      }
+
 
 a {
         text-decoration: none;
@@ -55,5 +97,11 @@ a {
 }
 
 label {
-        font-weight: bold;
+            font-weight: bold;
+            font-size: 1.3rem;
+}
+
+.notMember {
+font-size: 1.6rem;
+margin-top: 1.5rem;
 }

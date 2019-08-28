@@ -26,12 +26,14 @@ const RandomActsAdd = props => {
         axiosWithAuth()
             .post(`https://random-ark-generator.herokuapp.com/api/arks`, arks)
             .then(res => {
-                console.log("insideAuth", res.data)
-
-
+                setArks({
+                    ark: ''
+                });
+        
             })
-            .catch(err => console.log(err.response));
-    };
+            .catch(err => console.log(err.response))
+    
+};
 
     return ( 
     

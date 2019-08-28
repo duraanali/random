@@ -1,8 +1,10 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import './Dashboard.css';
-
+import conimg from './images/Contacts Button.jpg'
+import idimg from './images/Ideas.png'
+import ranimg from './images/randomizer.png'
 
 export class Dashboard extends React.Component {
     constructor(props) {
@@ -72,9 +74,10 @@ export class Dashboard extends React.Component {
       return (
         <button 
           className="btn btn-info float-right" 
-          type="button"href="" onClick={this.handleSubmit}>
-        Continue
-        </button>        
+          href="/signup">
+        Sign-Up 
+        </button>
+          
       )
     }
     return null;
@@ -83,7 +86,8 @@ export class Dashboard extends React.Component {
     
     render() {    
       return (
-        <React.Fragment>
+        <body class="Dashboard"> 
+        <div className='DashboardView'>
         <p className="step-count">STEP {this.state.currentStep} </p>
                   <h3>Welcome to RandomActs!</h3>
   
@@ -105,7 +109,8 @@ export class Dashboard extends React.Component {
                   {this.SubmitButton()}
   
         </form>
-        </React.Fragment>
+        </div>
+        </body>
       );
     }
   }
@@ -116,9 +121,9 @@ export class Dashboard extends React.Component {
     } 
     return(
       <div className="form-group">
-              <h3>Add your contacts!</h3>
-              <img src='./IMG/Contacts Button.jpg' className="contacts"/>
-              <p>In order to randomize a service idea with someone you know, you'll need to create a list of contacts.</p>
+             <img src ={conimg} alt="Contacts" className="center" />
+             <h3>Add your contacts!</h3>
+            <p>In order to randomize a service idea with someone you know, you'll need to create a list of contacts.</p>
       </div>
     );
   }
@@ -129,8 +134,8 @@ export class Dashboard extends React.Component {
     } 
     return(
       <div className="form-group">
+              <img src={idimg} alt="Ideas" class="center" />
               <h3>Discover your service ideas</h3>
-              <img src="./IMG/Ideas.png" className="ideas"/>
               <p>We provide a default list of service ideas that you can edit or delete what's already there. You can also add your own ideas!</p>
       </div>
     );
@@ -143,8 +148,8 @@ export class Dashboard extends React.Component {
     return(
       <React.Fragment>
       <div className="form-group">
+              <img src={ranimg} alt="randomizer" class="center" />
               <h3>Randomize your contacts and ideas</h3>
-              <img src="./IMG/randomizer.png" className='randomizer'/>
               <p>Use the randomizer page to generate a random contact and idea. Build up your completed acts and form kindness habits!</p>
       </div>
       </React.Fragment>

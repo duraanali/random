@@ -1,11 +1,13 @@
-body{
+body .Dashboard {
 	background-color: #6927d8;
+	margin-bottom: -100px;
+	padding-bottom: 200px;
 }
 *:focus{
 	outline: none !important;
 }
 
-#root{
+.DashboardView{
 	width:300px;
 	height: 500px;
 	box-shadow: 0px 0px 100px rgba(0,0,0,0.2);
@@ -13,10 +15,12 @@ body{
 	background-color: white;;
 	margin-top: 100px;
 	border: white;
-	border-radius: 20px;
+    border-radius: 20px;
 }
 
 .btn{
+    font-family: "Roboto";
+    font-weight: 400;
 	margin-top: 80px;
 	width: 100px;
 	border-radius: 20px;
@@ -46,9 +50,18 @@ body{
 	letter-spacing: 2px;
 }
 
-.contacts{
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 30px;
+  }
+
+/* .contacts{
 	height: 130px;
-	margin-left: 35px;
+    margin-left: 35px;
+    align-items: center;
 }
 
 .ideas{
@@ -59,19 +72,22 @@ body{
 .randomizer{
 	height: 130px;
 	margin-left: 80px;	
-}
+} */
+
 h3{
 	text-align: center;
 	color: #141518;
-	font-family: sans-serif;
+	font-family: "Roboto";
 	letter-spacing: 2px;
-	font-weight: 200;
-	
-	
+    font-weight: 600;
+    margin-bottom: -15px;
 }
 
 p{
-	margin-top: 80px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 15px;
+	margin-top: 40px;
 	text-align:center;
 	margin-left: 15px;
 	margin-right: 15px;
