@@ -1,8 +1,9 @@
 .container {
         background: #c3a9ee;
-        padding-bottom: 270px;
         padding-top: 125px;
-}
+        height: 100vh;
+      }
+      
 
 .form {
           display: block;
@@ -13,10 +14,19 @@
 position: relative;
 background: #ffffff;
 max-width: 488px;
-width: 100%;
+/* width: 100%; */
 box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
 margin: 0 auto;
 border-radius: 4px;
+/* make it center */
+width: 60%;
+margin: 0 auto;
+/* padding: 20px; */
+display: flex;
+justify-content: center;
+align-items: center;
+resize: both;
+overflow: auto;
 }
 
 .input {
@@ -41,18 +51,6 @@ margin-top: 0.5rem;
            font-size: 2.5rem;
 }
 
-/* .btnSignIn {
-        cursor: pointer;
-        background: #767676;
-        width: 100%;
-        border: 0;
-        padding: 10px 15px;
-        color: #ffffff;
-        -webkit-transition: 0.3s ease;
-        transition: 0.3s ease;
-        font-size: 1.7rem;
-} */
-
 .btnSignIn {
         background-color: #20262e;
         position: relative;
@@ -62,7 +60,7 @@ margin-top: 0.5rem;
   padding: 10px 15px;
   width: 100%;
   text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
@@ -102,6 +100,79 @@ label {
 }
 
 .notMember {
-font-size: 1.6rem;
+font-size: 0.9rem;
 margin-top: 1.5rem;
+font-family: Arial, Helvetica, sans-serif;
 }
+
+@media only screen and (max-width: 1024px) {
+        .container {
+          width: 100%;
+          height: 100%;
+        }
+        .form h2 button {
+          font-size: 0.2rem;
+        }
+        .form {
+          padding: 30px;
+        }
+        .btnSignIn {
+          font-size: 1rem;
+        }
+      }
+      
+@media only screen and (max-width: 800px) {
+        .container {
+          width: 100%;
+          height: 100%;
+        }
+        .form-cover {
+          width: 60%;
+          margin: 0 auto;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          resize: both;
+          overflow: auto;
+        }
+        .notMember {
+          font-size: 1rem;
+        }
+      }
+      
+      @media only screen and (max-width: 650px) {
+        .container {
+          width: 100%;
+          height: 100vh;
+        }
+        .form-cover {
+          width: 60%;
+          margin: 0 auto;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          resize: both;
+          overflow: auto;
+        }
+        .form {
+          padding: 10px;
+        }
+        .form h2{
+          font-size: 1.4rem;
+        }
+        .form label {
+          font-size: 1rem;
+          padding: 4px 5px;
+        }
+        .input {
+          font-size: 0.8rem;
+        }
+        .btnSignIn {
+          font-size: 0.8rem;
+        }
+        .notMember {
+          font-size: 0.8rem;
+        }
+      }

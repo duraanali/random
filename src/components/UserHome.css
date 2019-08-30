@@ -14,7 +14,7 @@ position: relative;
     transform: translate(-50%, -50%);
     letter-spacing: 0.5px;
     font-size: 40px;
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
 }
 
 .shapes{
@@ -23,6 +23,16 @@ position: relative;
     margin-top: 100px;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .shapes {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .WelcomeBack h2 {
+    font-size: 2rem;
+  }
 }
 
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);

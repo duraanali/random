@@ -5,9 +5,7 @@ import axiosWithAuth from "../../utils/axiosWithAuth"
 import './Random.css';
 
 const RandomActsAdd = props => {
-    const [arks, setArks] = useState({});
-
-
+    const [arks, setArks] = useState({ark: ""});
 
     const changeHandler = ev => {
         ev.persist();
