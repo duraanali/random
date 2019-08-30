@@ -1,5 +1,5 @@
 .contact-wrap {
-font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #6927d8;
   color: white;
   text-align: center;
@@ -7,7 +7,7 @@ font-family: "Roboto", sans-serif;
   position: relative;
 }
 
-.contact-wrap h1{
+.contact-wrap h1 {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -22,4 +22,178 @@ font-family: "Roboto", sans-serif;
   width: 750px;
   padding: 15px 0 15px 20px;
   margin: 0 auto;
+}
+
+.ContainerContact {
+  background: #ededed;
+}
+
+.tableContacts {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableContacts td,
+.tableContacts th {
+  padding: 20px;
+
+}
+
+.tableContacts tr:nth-child(even) {
+  background-color: #ffffff;
+  border-bottom: 11px solid #ededed;
+}
+
+
+.tableContacts th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.listContacts {
+  font-size: 1.2rem;
+  background-color: white;
+  border-bottom: 11px solid #ededed;
+}
+
+.contactsForm{
+  display: flex;
+  margin-top: 27px;
+  /* align-items: center;
+  justify-content: center; */
+  margin-right: 250px;
+  margin-left: 250px;
+}
+
+.inputContact{
+  outline: none;
+  width: 85%;
+  background: #F0F0F0;
+  border: 1px solid #d9d9d9;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.contactbtn{
+  cursor: pointer;
+  width: 15%;
+  background: #767676;
+  border: 0;
+  color: #ffffff;
+  transition: 0.3s ease;
+  height: 37px;
+}
+
+.delete-button {
+  background-color: #6927D8;
+  position: relative;
+  border: none;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  padding: 10px 15px;
+
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-button {
+  background-color: #6927D8;
+  position: relative;
+  border: none;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  margin-top: 10px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+.editForm {
+    width: 750px;
+  padding: 15px 0 15px 20px;
+  margin: 0 auto;
+}
+
+.FormContactEdit {
+  display: flex;
+      flex-direction: column;
+  margin-top: 20px;
+}
+
+.input {
+  outline: none;
+  display: block;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border: 1px solid #d9d9d9;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-weight: 400;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+
+
+.btnEdit {
+  background-color: #6927D8;
+  position: relative;
+  border: none;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+  padding: 10px 15px;
+
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.noContact {
+text-align: center;
+font-size: 2rem;
+}
+
+.update-button {
+  color: white;
+}
+
+.update-button:hover {
+  color: white;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: column;
 }

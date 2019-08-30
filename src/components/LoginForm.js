@@ -70,10 +70,11 @@ function LoginForm( {
               
                     axios.post(`https://random-ark-generator.herokuapp.com/api/auth/login`, values)
                         .then(res => {
-                            console.log("login success, login Payload =", res.data.token)
+                            console.log("login success, login Payload =", res.data.token, res.data.id)
                           setStatus(res.data.token)
                           resetForm();
                             localStorage.setItem('token', res.data.token);
+                            localStorage.setItem('id', res.data.id);
                            props.history.push('/welcome');
                         })
                         .catch(err => console.log(err.response));

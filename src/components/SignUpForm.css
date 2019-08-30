@@ -6,25 +6,139 @@
     align-items: center;
 }
 
+.already-member {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+}
 
 .container-signup {
-    padding: 100px;
+    padding-top: 125px;
     background-color: #EDABBB;
+  height: 100vh;
 }
-
 .btnSignUp {
-   
-
-    cursor: pointer;
-    background:  #3F1881;
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px 15px;
+    background-color: #20262e;
+    position: relative;
+    border: none;
+    font-size: 1.7rem;
     color: #ffffff;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    
-    font-size: 1rem;
-
-}
-
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btnSignUp:after {
+    content: "";
+    background: #767676;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  
+  .btnSignUp:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  /* Small devices */
+  @media only screen and (max-width: 1024px) {
+    .container-signup {
+      width: 100%;
+      height: 100vh;
+    }
+    .form h2 {
+      font-size: 2rem;
+    }
+    .form {
+      padding: 30px;
+    }
+    .btnSignUp {
+      font-size: 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .container-signup {
+      width: 100%;
+      height: 100vh;
+    }
+    .already-member {
+      margin-top: 20px;
+    }
+    .form-cover {
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      resize: both;
+      overflow: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .container-signup {
+      width: 100%;
+      height: 100vh;
+    }
+    .form-cover {
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      resize: both;
+      overflow: auto;
+    }
+    .form {
+      padding: 10px;
+    }
+    .form h2{
+      font-size: 1.4rem;
+    }
+    .form label {
+      font-size: 1rem;
+      padding: 4px 5px;
+    }
+    .input {
+      font-size: 0.8rem;
+    }
+    .btnSignIn {
+      font-size: 0.8rem;
+    }
+    .notMember {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .form-cover {
+      width: 100%;
+      margin: 0 auto;
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      resize: both;
+      overflow: auto;
+    }
+    .already-member {
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { Link } from 'react-router-dom';
 // import axios from "axios";
@@ -33,7 +33,7 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status }) => {
 
           <button type = "submit"
           className = "btnSignUp"> Join </button> 
-           <p className="already-member"> Already a member? <Link to='/login'> Sign in </Link></p >
+           <p className="already-member"> Already a member? <Link to='/'> Sign in </Link></p >
           </Form>
           </div>
           </div>
@@ -62,7 +62,7 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status }) => {
      .oneOf([Yup.ref('password'), null], 'Passwords must match')
     }),
   
-    handleSubmit(values, props ) {
+    handleSubmit(values, props, resetForm ) {
       console.log("sign up form values =", values);
       console.log("sign up form email value =", values.email);
       console.log("sign up form password value =", values.password);
@@ -79,7 +79,8 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status }) => {
           console.log("sign up success, login payload =", response.data)
           // setStatus(response.data)
           localStorage.setItem('token', JSON.stringify(response.data));
-          // props.history.push('/login');
+          resetForm();
+          props.history.push('/');
 
         })
         .catch(error => console.log("sign up errorz", error.response));

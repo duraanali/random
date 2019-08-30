@@ -1,6 +1,5 @@
-import React, { Fragment, Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import './Dashboard.css';
 import conimg from './images/Contacts Button.jpg'
 import idimg from './images/Ideas.png'
@@ -70,7 +69,7 @@ export class Dashboard extends React.Component {
   
   SubmitButton(){
     let currentStep = this.state.currentStep;
-    if(currentStep == 3){
+    if(currentStep === 3){
       return (
         <button 
           className="btn btn-info float-right" 
@@ -86,7 +85,7 @@ export class Dashboard extends React.Component {
     
     render() {    
       return (
-        <body class="Dashboard"> 
+        <div className="Dashboard"> 
         <div className='DashboardView'>
         <p className="step-count">STEP {this.state.currentStep} </p>
                   <h3>Welcome to RandomActs!</h3>
@@ -110,7 +109,7 @@ export class Dashboard extends React.Component {
   
         </form>
         </div>
-        </body>
+        </div>
       );
     }
   }

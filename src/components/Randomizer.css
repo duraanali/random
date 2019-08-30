@@ -1,0 +1,71 @@
+.mainCover {
+  height: 100vh;
+  background: #ededed;
+}
+
+.boxInside {
+  background: #ffffff;
+  max-width: 488px;
+  /* width: 100%; */
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  /* make it center */
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+}
+
+.header {
+     /* font-family: "Roboto"; */
+  background: #4788eb;
+  color: white;
+  text-align: center;
+  height: 150px;
+  position: relative;
+}
+
+.header h2 {
+  /* font-family: "Roboto"; */
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.5px;
+  font-size: 40px;
+}
+
+.btnRandomizer {
+    background-color: #6927D8;
+    position: relative;
+    border: none;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    padding: 10px 15px;
+   
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.titleRandom {
+     /* font-family: "Roboto"; */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px;
+}

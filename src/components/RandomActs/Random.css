@@ -54,8 +54,149 @@
 
 }
 
-.edit-icon {
- 
+.random-acts-container {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  padding: 15px 0 15px 20px;
+  margin: 0 auto;
+
+}
+
+.acts-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.random-actz {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+}
 
 
+.random-delete {
+  border: 2px solid black;
+  width: 10%;
+}
+
+.random-edit {
+  border: 2px solid purple;
+  width: 10%;
+  
+
+}
+
+.arkContainer {
+  display: flex;
+}
+
+.edit-delete-acts {
+  border: 4px solid teal;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 50%;
+}
+
+.random-cards {
+display: flex;
+flex-direction: row;
+}
+.edit-button {
+  background-color: #6927D8;
+  position: relative;
+  border: none;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  margin-top: 10px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.tableRandom {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableRandom td,
+.tableRandom th {
+  padding: 20px;
+
+}
+
+.tableRandom tr:nth-child(even) {
+  background-color: #ffffff;
+  border-bottom: 11px solid #ededed;
+}
+
+
+.tableRandom th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.listRandom {
+  font-size: 1.2rem;
+  background-color: white;
+  border: 11px solid #ededed;
+}
+
+
+.contactbtn {
+  cursor: pointer;
+  width: 15%;
+  background: #767676;
+  border: 0;
+  color: #ffffff;
+  transition: 0.3s ease;
+  height: 37px;
+}
+
+.delete-button {
+  background-color: #6927D8;
+  position: relative;
+  border: none;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  padding: 10px 15px;
+
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-button {
+  background-color: #6927D8;
+  position: relative;
+  border: none;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  padding: 10px 15px;
+      margin-bottom: 10px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
 }

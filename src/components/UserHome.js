@@ -1,6 +1,6 @@
-import React, { Fragment, Component }from 'react';
-import { Link, Route } from "react-router-dom";
+import React from 'react';
 import './UserHome.css';
+import { Link } from 'react-router-dom';
 import newconimg from './images/New-Contacts.png'
 import newidimg from './images/New-Ideas.png'
 import newranimg from './images/New-Randomizer.png'
@@ -16,23 +16,27 @@ export default function UserHome () {
         </div>
 
 <div className='shapes'>
-        <figure class="snip1321"> <img src ={newconimg} alt="Contacts" class="center" />
-  <figcaption><i class="ion-upload"></i>
+        <figure className="snip1321"> <img src ={newconimg} alt="Contacts" className="center" />
+  <figcaption><i className="ion-upload"></i>
     <h4>Upload</h4>
     <h2>Contacts</h2>
-  </figcaption><a href="/contacts"></a>
+  </figcaption>
+  <Link to="/contacts" />
+
 </figure>
-<figure class="snip1321"> <img src={newidimg} alt="Ideas" class="center" />
-  <figcaption><i class="ion-stats-bars"></i>
+<figure className="snip1321"> <img src={newidimg} alt="Ideas" className="center" />
+  <figcaption><i className="ion-stats-bars"></i>
     <h4>View </h4>
     <h2>Ideas </h2>
-  </figcaption><a href="/ideas"></a>
+  </figcaption>
+  <Link to ="/ideas" />
 </figure>
-<figure class="snip1321"> <img src={newranimg} alt="randomizer" class="center" />
-  <figcaption><i class="ion-share"></i>
+<figure className="snip1321"> <img src={newranimg} alt="randomizer" className="center" />
+  <figcaption><i className="ion-share"></i>
     <h4>View</h4>
     <h2>Randomizer</h2>
-  </figcaption><a href="/randomizer"></a>
+  </figcaption>
+  <Link to="/randomizer" />
 </figure>
 </div>
 
